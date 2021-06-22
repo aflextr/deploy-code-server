@@ -10,7 +10,7 @@ COPY deploy-container/settings.json .local/share/code-server/User/settings.json
 ENV SHELL=/bin/bash
 
 # Install unzip + rclone (support for remote filesystem)
-RUN sudo apt-get update && sudo apt-get install unzip nano screen wget curl  -y
+RUN sudo apt-get update && sudo apt-get install unzip nano screen wget curl links2 chromium net-tools python3 -y
 RUN curl https://rclone.org/install.sh | sudo bash
 
 # Copy rclone tasks to /tmp, to potentially be used
